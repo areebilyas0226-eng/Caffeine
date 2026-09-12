@@ -1,0 +1,7 @@
+{
+  "name": "Caffeine Aligarh - V2 Cinematic Experience",
+  "description": "A cinematic, editorial-quality digital journey through Caffeine Aligarh — featuring smooth scroll-driven storytelling, interactive signature showcase, complete artisanal menu, online ordering, table reservations, and verified local reviews.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

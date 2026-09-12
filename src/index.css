@@ -1,9 +1,105 @@
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+@import "tailwindcss";
+
+:root {
+  --color-bg: #090503;
+  --color-espresso: #0d0805;
+  --color-card: #140d08;
+  --color-gold: #d4a574;
+  --color-gold-hover: #e0b484;
+  --color-amber: #c58b4b;
+  --color-cream: #f6eee3;
+  --color-muted: #9e8e80;
+  --color-smoke: #786b60;
+  --color-border: rgba(212, 165, 116, 0.12);
 }
 
-html, body, #root {
-  min-height: 100vh;
+html {
+  background-color: #090503;
+  color: #f6eee3;
+}
+
+body {
+  background-color: #090503;
+  color: #f6eee3;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Luxury Display and Serif classes */
+.font-display {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.14em;
+}
+
+.font-serif {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-sans {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Cinematic Film Grain Texture overlay */
+.film-grain {
+  background-image: radial-gradient(rgba(212, 165, 116, 0.04) 1px, transparent 0);
+  background-size: 20px 20px;
+}
+
+/* Atmospheric bloom & lighting */
+.ambient-glow-gold {
+  background: radial-gradient(circle at center, rgba(212, 165, 116, 0.08) 0%, transparent 70%);
+}
+
+.ambient-glow-amber {
+  background: radial-gradient(circle at center, rgba(197, 139, 75, 0.06) 0%, transparent 70%);
+}
+
+/* Seamless scene blend gradient */
+.scene-transition-bottom {
+  background: linear-gradient(180deg, transparent 0%, rgba(9, 5, 3, 0.6) 50%, #090503 100%);
+}
+
+.scene-transition-top {
+  background: linear-gradient(180deg, #090503 0%, rgba(9, 5, 3, 0.6) 50%, transparent 100%);
+}
+
+/* Smooth custom scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090503;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a1b12;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d4a574;
+}
+
+/* Selection */
+::selection {
+  background: rgba(212, 165, 116, 0.35);
+  color: #fff8f0;
+}
+
+/* Accessibility: Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
